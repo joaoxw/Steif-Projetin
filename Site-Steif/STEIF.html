@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>STEIF — Moda Streetwear em Porto Velho | RO</title>
+<meta name="description" content="STEIF é uma marca de moda streetwear e lifestyle de Porto Velho — RO. Entrega via motoboy em toda Porto Velho e envio para todo o Brasil. Compre pelo WhatsApp.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="STEIF — Moda Streetwear em Porto Velho | RO">
+<meta property="og:description" content="Moda urbana para quem transforma atitude em estilo. Entrega em Porto Velho via motoboy e envio para todo o Brasil. Compre pelo WhatsApp.">
+<meta property="og:image" content="images/og-cover.jpg">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23000%22/><text x=%2250%25%22 y=%2262%25%22 font-size=%2255%22 fill=%22%23fff%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22900%22>S</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================
+   STEIF — Landing Page
+   Tokens: preto real (#050505), branco quente (#F7F6F2),
+   cinzas neutros, acento em greige sofisticado (#9C9182)
+   ============================================ */
+
+:root{
+  --black:#050505;
+  --white:#F7F6F2;
+  --paper:#FAFAF7;
+  --charcoal:#181816;
+  --line:#2A2A27;
+  --line-soft:#E4E1D9;
+  --gray-700:#59564F;
+  --gray-500:#8C8880;
+  --gray-300:#C9C5BA;
+  --accent:#9C9182;
+  --accent-dark:#6E6558;
+  --max:1240px;
+  --radius:2px;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:88px;
+}
+
+body{
+  background:var(--white);
+  color:var(--black);
+  font-family:'Inter',sans-serif;
+  font-weight:400;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+h1,h2,h3,.display{
+  font-family:'Archivo',sans-serif;
+  font-weight:900;
+  line-height:0.98;
+  letter-spacing:-0.01em;
+}
+
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+ul{list-style:none;}
+
+.wrap{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 32px;
+}
+
+.eyebrow-num{
+  font-family:'Archivo',sans-serif;
+  font-weight:700;
+  font-size:13px;
+  letter-spacing:.14em;
+  color:var(--gray-500);
+}
+
+/* ---------- botões ---------- */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:16px 30px;
+  font-family:'Inter',sans-serif;
+  font-weight:600;
+  font-size:14.5px;
+  letter-spacing:.01em;
+  border-radius:var(--radius);
+  transition:transform .35s var(--ease), background-color .25s ease, color .25s ease, border-color .25s ease;
+  white-space:nowrap;
+}
+.btn-primary{
+  background:var(--black);
+  color:var(--white);
+  border:1px solid var(--black);
+}
+.btn-primary:hover{background:#000; transform:translateY(-2px);}
+.btn-whats{
+  background:#1F2E27;
+  color:#fff;
+  border:1px solid #1F2E27;
+}
+.btn-whats:hover{background:#152119; transform:translateY(-2px);}
+.btn-outline{
+  background:transparent;
+  color:var(--black);
+  border:1px solid var(--black);
+}
+.btn-outline:hover{background:var(--black); color:var(--white);}
+.btn-ghost-white{
+  background:transparent;
+  color:var(--white);
+  border:1px solid rgba(247,246,242,.5);
+}
+.btn-ghost-white:hover{background:var(--white); color:var(--black); border-color:var(--white);}
+.btn-block{width:100%;}
+.btn svg{flex-shrink:0;}
+
+/* ============================================
+   HEADER
+   ============================================ */
+header{
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:1000;
+  background:rgba(247,246,242,.86);
+  backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s ease, background-color .3s ease;
+}
+header.scrolled{
+  border-bottom-color:var(--line-soft);
+  background:rgba(247,246,242,.96);
+}
+.nav{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 32px;
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.logo{
+  font-family:'Archivo',sans-serif;
+  font-weight:900;
+  font-size:23px;
+  letter-spacing:.06em;
+}
+.nav-links{
+  display:flex;
+  gap:34px;
+  align-items:center;
+}
+.nav-links a{
+  font-size:14px;
+  font-weight:500;
+  color:var(--gray-700);
+  position:relative;
+  padding:4px 0;
+  transition:color .2s ease;
+}
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:0; bottom:0;
+  width:0; height:1px;
+  background:var(--black);
+  transition:width .3s var(--ease);
+}
+.nav-links a:hover{color:var(--black);}
+.nav-links a:hover::after{width:100%;}
+
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.icon-btn{
+  width:38px; height:38px;
+  display:flex; align-items:center; justify-content:center;
+  border-radius:50%;
+  transition:background-color .2s ease;
+}
+.icon-btn:hover{background:rgba(0,0,0,.06);}
+.icon-btn svg{width:19px;height:19px;stroke:var(--black);}
+
+.hamburger{
+  display:none;
+  width:38px; height:38px;
+  align-items:center; justify-content:center;
+  flex-direction:column;
+  gap:5px;
+}
+.hamburger span{
+  display:block; width:22px; height:1.5px; background:var(--black);
+  transition:transform .3s var(--ease), opacity .3s ease;
+}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+
+.mobile-panel{
+  position:fixed;
+  top:76px; left:0; right:0; bottom:0;
+  background:var(--white);
+  z-index:999;
+  transform:translateX(100%);
+  transition:transform .4s var(--ease);
+  padding:40px 32px;
+  display:flex; flex-direction:column; gap:6px;
+}
+.mobile-panel.open{transform:translateX(0);}
+.mobile-panel a{
+  font-family:'Archivo',sans-serif;
+  font-weight:700;
+  font-size:30px;
+  padding:14px 0;
+  border-bottom:1px solid var(--line-soft);
+}
+.mobile-panel .btn{margin-top:28px;}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:flex-end;
+  padding-top:76px;
+  background:var(--black);
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(180deg, rgba(5,5,5,.15) 0%, rgba(5,5,5,.75) 68%, rgba(5,5,5,.96) 100%),
+    url('images/hero-modelo.jpg');
+  background-size:cover;
+  background-position:center 20%;
+  background-color:#111;
+}
+.hero-lines{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.35;
+}
+.hero-inner{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 32px 96px;
+  color:var(--white);
+}
+.hero-tag{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:13px;
+  color:var(--gray-300);
+  margin-bottom:26px;
+  font-weight:500;
+}
+.hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);}
+.hero h1{
+  font-size:clamp(52px, 9vw, 118px);
+  color:var(--white);
+  max-width:900px;
+}
+.hero p.sub{
+  margin-top:26px;
+  font-size:clamp(16px,2vw,19px);
+  color:var(--gray-300);
+  max-width:440px;
+  font-weight:400;
+}
+.hero-actions{
+  margin-top:44px;
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+/* ============================================
+   LOCALIZAÇÃO
+   ============================================ */
+.local{
+  background:var(--white);
+  padding:120px 0;
+}
+.local-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+.local-pin{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:8px 16px 8px 12px;
+  border:1px solid var(--line-soft);
+  border-radius:999px;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.02em;
+  margin-bottom:28px;
+}
+.local h2{
+  font-size:clamp(34px,4.5vw,54px);
+}
+.local p{
+  margin-top:24px;
+  font-size:17px;
+  color:var(--gray-700);
+  max-width:480px;
+}
+.local-visual{
+  position:relative;
+  aspect-ratio:4/5;
+  background:var(--charcoal);
+  overflow:hidden;
+  background-image:linear-gradient(160deg, #1c1c19 0%, #050505 100%), url('images/porto-velho.jpg');
+  background-size:cover;
+  background-position:center;
+}
+.local-visual .badge{
+  position:absolute;
+  left:24px; bottom:24px;
+  color:var(--white);
+  font-family:'Archivo',sans-serif;
+  font-weight:900;
+  font-size:15px;
+  letter-spacing:.08em;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.local-visual .badge svg{width:17px;height:17px;stroke:var(--white);}
+
+/* ============================================
+   ENTREGA
+   ============================================ */
+.entrega{
+  background:var(--charcoal);
+  color:var(--white);
+  padding:120px 0;
+}
+.entrega-head{
+  max-width:560px;
+  margin-bottom:64px;
+}
+.entrega h2{
+  font-size:clamp(32px,4.5vw,50px);
+  color:var(--white);
+}
+.entrega-cards{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:rgba(247,246,242,.12);
+  border:1px solid rgba(247,246,242,.12);
+}
+.entrega-card{
+  background:var(--charcoal);
+  padding:44px 40px;
+  transition:background-color .3s ease;
+}
+.entrega-card:hover{background:#1f1f1c;}
+.entrega-card svg{width:32px;height:32px;stroke:var(--accent);margin-bottom:26px;}
+.entrega-card h3{
+  font-size:20px;
+  font-weight:700;
+  font-family:'Archivo',sans-serif;
+  margin-bottom:12px;
+  color:var(--white);
+}
+.entrega-card p{
+  color:var(--gray-300);
+  font-size:15px;
+  max-width:320px;
+}
+.entrega-cta{
+  margin-top:52px;
+  display:flex;
+}
+
+/* ============================================
+   COLEÇÃO
+   ============================================ */
+.colecao{
+  background:var(--white);
+  padding:120px 0 100px;
+}
+.colecao-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  margin-bottom:56px;
+  gap:24px;
+  flex-wrap:wrap;
+}
+.colecao h2{
+  font-size:clamp(32px,4.5vw,50px);
+}
+.colecao-head p{
+  color:var(--gray-500);
+  font-size:15px;
+  max-width:280px;
+}
+.produtos-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:28px 22px;
+}
+.produto-card{
+  display:flex;
+  flex-direction:column;
+}
+.produto-img{
+  position:relative;
+  aspect-ratio:3/4;
+  background:linear-gradient(150deg,#e7e4dc 0%,#d3cfc4 100%);
+  overflow:hidden;
+  margin-bottom:16px;
+}
+.produto-img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s var(--ease);
+}
+.produto-card:hover .produto-img img{transform:scale(1.045);}
+.produto-mono{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Archivo',sans-serif;
+  font-weight:900;
+  font-size:15px;
+  letter-spacing:.1em;
+  color:rgba(5,5,5,.22);
+}
+.produto-tam{
+  position:absolute;
+  top:12px; left:12px;
+  background:rgba(247,246,242,.92);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.04em;
+  padding:5px 9px;
+}
+.produto-info{flex:1;display:flex;flex-direction:column;}
+.produto-nome{
+  font-size:15.5px;
+  font-weight:600;
+  margin-bottom:4px;
+}
+.produto-preco{
+  font-size:15px;
+  color:var(--gray-700);
+  margin-bottom:14px;
+}
+.produto-btn{
+  margin-top:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:12px 14px;
+  border:1px solid var(--black);
+  font-size:13px;
+  font-weight:600;
+  transition:background-color .25s ease, color .25s ease;
+}
+.produto-btn:hover{background:var(--black); color:var(--white);}
+.produto-btn svg{width:15px;height:15px;}
+
+/* ============================================
+   COMPRE DO SEU JEITO
+   ============================================ */
+.whats-cta{
+  background:var(--black);
+  color:var(--white);
+  padding:130px 0;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.whats-cta::before{
+  content:"";
+  position:absolute;
+  top:-40%; left:50%;
+  width:900px; height:900px;
+  transform:translateX(-50%);
+  background:radial-gradient(circle, rgba(156,145,130,.16) 0%, transparent 68%);
+  pointer-events:none;
+}
+.whats-inner{
+  position:relative;
+  z-index:2;
+  max-width:640px;
+  margin:0 auto;
+}
+.whats-cta h2{
+  font-size:clamp(34px,5vw,58px);
+  color:var(--white);
+}
+.whats-cta p{
+  margin:26px auto 44px;
+  color:var(--gray-300);
+  font-size:17px;
+  max-width:480px;
+}
+
+/* ============================================
+   COMO COMPRAR
+   ============================================ */
+.passos{
+  background:var(--white);
+  padding:120px 0;
+}
+.passos h2{
+  font-size:clamp(32px,4.5vw,50px);
+  margin-bottom:64px;
+  max-width:520px;
+}
+.passos-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:48px;
+}
+.passo-num{
+  font-family:'Archivo',sans-serif;
+  font-weight:900;
+  font-size:15px;
+  color:var(--accent-dark);
+  margin-bottom:22px;
+}
+.passo{
+  padding-top:26px;
+  border-top:1px solid var(--line-soft);
+}
+.passo h3{
+  font-size:20px;
+  font-weight:700;
+  font-family:'Archivo',sans-serif;
+  margin-bottom:12px;
+}
+.passo p{color:var(--gray-700); font-size:15px; max-width:280px;}
+
+/* ============================================
+   SOBRE
+   ============================================ */
+.sobre{
+  background:var(--paper);
+  padding:130px 0;
+}
+.sobre-grid{
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:70px;
+  align-items:center;
+}
+.sobre-visual{
+  aspect-ratio:1/1.05;
+  background:var(--charcoal);
+  background-image:url('images/sobre-steif.jpg');
+  background-size:cover;
+  background-position:center;
+}
+.sobre h2{
+  font-size:clamp(30px,4.2vw,46px);
+  max-width:480px;
+}
+.sobre p{
+  margin-top:26px;
+  color:var(--gray-700);
+  font-size:17px;
+  max-width:460px;
+}
+
+/* ============================================
+   INSTAGRAM
+   ============================================ */
+.insta{
+  background:var(--white);
+  padding:100px 0;
+  text-align:center;
+  border-top:1px solid var(--line-soft);
+  border-bottom:1px solid var(--line-soft);
+}
+.insta h2{font-size:clamp(28px,4vw,42px);}
+.insta p{
+  margin:18px auto 34px;
+  color:var(--gray-500);
+  max-width:420px;
+}
+
+/* ============================================
+   CTA FINAL
+   ============================================ */
+.cta-final{
+  background:var(--black);
+  color:var(--white);
+  padding:150px 0;
+  text-align:center;
+}
+.cta-final h2{
+  font-size:clamp(38px,7vw,84px);
+  color:var(--white);
+  max-width:900px;
+  margin:0 auto;
+}
+.cta-final p{
+  margin:26px auto 44px;
+  color:var(--gray-300);
+  font-size:17px;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer{
+  background:var(--charcoal);
+  color:var(--gray-300);
+  padding:80px 0 34px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr;
+  gap:48px;
+  padding-bottom:56px;
+  border-bottom:1px solid rgba(247,246,242,.1);
+}
+.footer-logo{
+  font-family:'Archivo',sans-serif;
+  font-weight:900;
+  font-size:24px;
+  color:var(--white);
+  letter-spacing:.06em;
+}
+.footer-grid p{font-size:14px;margin-top:14px;color:var(--gray-500);max-width:260px;}
+.footer-col h4{
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.06em;
+  color:var(--white);
+  margin-bottom:18px;
+}
+.footer-col ul li{margin-bottom:11px;}
+.footer-col ul li a{font-size:14.5px; color:var(--gray-300); transition:color .2s ease;}
+.footer-col ul li a:hover{color:var(--white);}
+.footer-bottom{
+  padding-top:28px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
+  font-size:13px;
+  color:var(--gray-500);
+}
+
+/* ============================================
+   WHATSAPP FLUTUANTE
+   ============================================ */
+.whats-float{
+  position:fixed;
+  right:22px; bottom:22px;
+  z-index:900;
+  width:58px; height:58px;
+  border-radius:50%;
+  background:#1F2E27;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 8px 26px rgba(0,0,0,.28);
+  transition:transform .3s var(--ease);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+.whats-float:hover{transform:scale(1.07);}
+.whats-float svg{width:27px;height:27px;fill:#fff;}
+
+/* ============================================
+   REVEAL
+   ============================================ */
+.reveal{
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity .8s var(--ease), transform .8s var(--ease);
+}
+.reveal.in{opacity:1; transform:translateY(0);}
+
+@media (prefers-reduced-motion: reduce){
+  *{transition-duration:.01ms !important; animation-duration:.01ms !important; scroll-behavior:auto !important;}
+}
+
+/* ============================================
+   RESPONSIVO
+   ============================================ */
+@media (max-width:1024px){
+  .produtos-grid{grid-template-columns:repeat(2,1fr);}
+  .sobre-grid{grid-template-columns:1fr; gap:44px;}
+  .sobre-visual{aspect-ratio:16/9;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:860px){
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .local-grid{grid-template-columns:1fr; gap:36px;}
+  .entrega-cards{grid-template-columns:1fr;}
+  .passos-grid{grid-template-columns:1fr; gap:36px;}
+  .wrap{padding:0 22px;}
+  .nav{padding:0 22px;}
+  .hero-inner{padding:0 22px 64px;}
+  .footer-grid{grid-template-columns:1fr; gap:36px;}
+}
+@media (max-width:560px){
+  .produtos-grid{grid-template-columns:repeat(2,1fr); gap:16px 12px;}
+  .icon-btn:nth-of-type(2){display:none;}
+  .local, .entrega, .colecao, .sobre, .passos, .whats-cta, .cta-final, .insta{padding-top:80px; padding-bottom:80px;}
+}
+
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     HEADER
+     ============================================ -->
+<header id="siteHeader">
+  <div class="nav wrap" style="padding-left:0;padding-right:0;">
+    <a href="#" class="logo">STEIF</a>
+
+    <nav class="nav-links" aria-label="Menu principal">
+      <a href="#inicio">Início</a>
+      <a href="#colecao">Coleção</a>
+      <a href="#colecao">Masculino</a>
+      <a href="#colecao">Feminino</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#entregas">Entregas</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" aria-label="Buscar produtos">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="Ver carrinho">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h2l2.4 12.2a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H7"/><circle cx="10" cy="21" r="1.3"/><circle cx="17" cy="21" r="1.3"/></svg>
+      </button>
+      <button class="btn btn-primary" onclick="contatoGeral()">Comprar pelo WhatsApp</button>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Painel mobile -->
+<div class="mobile-panel" id="mobilePanel">
+  <a href="#inicio">Início</a>
+  <a href="#colecao">Coleção</a>
+  <a href="#colecao">Masculino</a>
+  <a href="#colecao">Feminino</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#entregas">Entregas</a>
+  <button class="btn btn-primary btn-block" onclick="contatoGeral()">Comprar pelo WhatsApp</button>
+</div>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero" id="inicio">
+  <!-- Troque o arquivo em images/hero-modelo.jpg por uma foto real de modelo streetwear -->
+  <div class="hero-bg" role="img" aria-label="Modelo usando peça streetwear STEIF" style="background-image: url('images/banner-steif.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+  <div class="hero-inner">
+    <div class="hero-tag"><span class="dot"></span> Por — JoaoRicardoDEV</div>
+    <h1>ㅤㅤㅤㅤㅤㅤ<br>ㅤㅤㅤㅤㅤㅤㅤㅤㅤ</h1>
+    <p class="sub">Moda urbana para quem transforma atitude em estilo.</p>
+    <div class="hero-actions">
+      <a href="#colecao" class="btn btn-primary">Ver coleção</a>
+      <button class="btn btn-whats" onclick="contatoGeral()">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.37 5.07L2 22l5.19-1.47a9.86 9.86 0 0 0 4.85 1.27h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2zm0 17.9h-.01a8 8 0 0 1-4.08-1.12l-.29-.17-3.03.86.82-2.96-.19-.3a7.93 7.93 0 0 1-1.23-4.28c0-4.42 3.6-8.01 8.02-8.01 4.41 0 8 3.59 8 8.01 0 4.42-3.59 8-8 8zm4.39-6.01c-.24-.12-1.43-.71-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41-.14-.01-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.56.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
+        Comprar pelo WhatsApp
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     STEIF EM PORTO VELHO
+     ============================================ -->
+<section class="local reveal" id="local">
+  <div class="wrap local-grid">
+    <div>
+      <div class="local-pin">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#050505" stroke-width="1.8"><path d="M12 21s7-7.1 7-12a7 7 0 1 0-14 0c0 4.9 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg>
+        Porto Velho — RO 
+      </div>
+      <h2>STEIF EM<br>PORTO VELHO</h2>
+      <p>Somos uma loja de moda localizada em Porto Velho, Rondônia, levando estilo urbano para quem busca peças que combinam personalidade, qualidade e atitude.</p>
+    </div>
+    <!-- Troque images/porto-velho.jpg por uma foto da cidade ou da loja -->
+<div class="local-visual" style="position: relative; overflow: hidden; width: 100%; min-height: 450px;">
+  <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    <source src="videos/videos.mp4" type="video/mp4">
+  </video>
+  <div class="badge">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 21s7-7.1 7-12a7 7 0 1 0-14 0c0 4.9 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg>
+    PORTO VELHO RO
+  </div>
+</div>
+</div>
+  </div>
+</section>
+
+<!-- ============================================
+     ENTREGA
+     ============================================ -->
+<section class="entrega reveal" id="entregas">
+  <div class="wrap">
+    <div class="entrega-head">
+      <span class="eyebrow-num">ENTREGA</span>
+      <h2 style="margin-top:14px;">DO NOSSO ESTILO<br>ATÉ VOCÊ</h2>
+    </div>
+    <div class="entrega-cards">
+      <div class="entrega-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.4"/><circle cx="17" cy="18" r="2.4"/><path d="M9 18h6M3 14l2-5h5l2 5M14 9h3l3 4v5h-2M14 9V6h-4"/></svg>
+        <h3>Entrega em Porto Velho</h3>
+        <p>Entregamos via motoboy para toda Porto Velho — RO.</p>
+      </div>
+      <div class="entrega-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="13" height="10"/><path d="M15 10h4l3 3v4h-7z"/><circle cx="6.5" cy="19" r="1.6"/><circle cx="18" cy="19" r="1.6"/></svg>
+        <h3>Envio para todo o Brasil</h3>
+        <p>Enviamos nossos produtos para todo o Brasil.</p>
+      </div>
+    </div>
+    <div class="entrega-cta">
+      <button class="btn btn-ghost-white" onclick="falarSobreEntrega()">Falar sobre entrega</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     COLEÇÃO
+     ============================================ -->
+<section class="colecao reveal" id="colecao">
+  <div class="wrap">
+    <div class="colecao-head">
+      <h2>NOVA<br>COLEÇÃO</h2>
+      <p>Peças pensadas para quem constrói o próprio estilo, sem seguir fórmula.</p>
+    </div>
+
+    <!-- PRODUTOS — duplique o bloco .produto-card para adicionar mais itens -->
+    <div class="produtos-grid">
+
+      <div class="produto-card">
+        <div class="produto-img">
+          <span class="produto-tam">P · M · G · GG</span>
+          <div class="produto-mono">STEIF</div>
+            <img src="https://instagram.fgjm1-1.fna.fbcdn.net/v/t51.82787-15/791296411_18036164576832881_9194233006091456557_n.jpg?stp=dst-jpegr_e35_p640x640_sh2.08_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=Mzk3NjY5MDI1NTM2MzkxMzAwMA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMjc3OC5oZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=jLZwmpEz7FQQ7kNvwEQYSr-&_nc_oc=AdoYMxXtU3FJA2Sl6TcG-opzl-LCAXDVoanvomI82PO4YGsgSd7za6HQbozjNx4M5zo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fgjm1-1.fna&_nc_gid=61GU1UwaFWhVTFZ22lA5bA&_nc_ss=7a22e&oh=00_AQJ00kPdDszDmdYn0AGCnzCBDdnhb8r80dMfYqMQsRAGyg&oe=6AB70AEA" alt="Identidade visual da STEIF" alt="DRY FIT NK compressão"> 
+        </div>
+        <div class="produto-info">
+          <div class="produto-nome">Camiseta DRY FIT NK compressão</div>
+          <div class="produto-preco">R$ 129,90</div>
+          <button class="produto-btn" onclick="comprarProduto('Camiseta DRY FIT NK compressão')">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.37 5.07L2 22l5.19-1.47a9.86 9.86 0 0 0 4.85 1.27h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2z"/></svg>
+            Comprar pelo WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div class="produto-card">
+        <div class="produto-img">
+          <span class="produto-tam">P · M · G</span>
+          <div class="produto-mono">STEIF</div>
+          <img src="https://instagram.fgjm1-1.fna.fbcdn.net/v/t51.82787-15/748311657_18029076914832881_1913906619374034290_n.jpg?stp=dst-jpg_e35_p480x480_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ig_cache_key=Mzk0MTk1NzMyMTI4MjIyNTIzNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA5MS5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=XmD1c79eTMMQ7kNvwHzAVyr&_nc_oc=AdprP3Cut62uRrWyIkroC0C1aobbZWAstlCx3n_vFh4oykZ4O6-P9VaJ0F4lzQ3IiEc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fgjm1-1.fna&_nc_gid=HxYd84ACiF30iVLXv9Duvg&_nc_ss=7a22e&oh=00_AQIr4DLSucjnrICuEyaHEdr0Ad1TaR5tm1zavi0-9i5DSA&oe=6AB72D48" alt="Identidade visual da STEIF" alt="Calça reta Presence jeans"> 
+        </div>
+        <div class="produto-info">
+          <div class="produto-nome">Calça reta Presence jeans detalhe em destroyed</div>
+          <div class="produto-preco">R$ 149,90</div>
+          <button class="produto-btn" onclick="comprarProduto('Calça reta Presence jeans detalhe em destroyed')">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.37 5.07L2 22l5.19-1.47a9.86 9.86 0 0 0 4.85 1.27h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2z"/></svg>
+            Comprar pelo WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div class="produto-card">
+        <div class="produto-img">
+          <span class="produto-tam">M · G · GG</span>
+          <div class="produto-mono">STEIF</div>
+          <img src="https://instagram.fgjm1-1.fna.fbcdn.net/v/t51.82787-15/669676224_18016463594832881_1526477850171651338_n.jpg?stp=dst-jpg_e35_p640x640_sh2.08_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=Mzg3MzA2NTM5NzAwODUzMjQ0NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTAwMi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=CYEW4zaDg6QQ7kNvwGUrol_&_nc_oc=AdrDJTVM0I4Q_OWesGqOXe0RlEesARD22PaB1CBMSc_adBHBKCQnSq0fVJUbJPKg5gs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fgjm1-1.fna&_nc_gid=dftgMnVb8oVTE3zGAuWHNg&_nc_ss=7a22e&oh=00_AQIwr0x9XW26uVBnQgo2s9Y4-VdCD1EIDv7fQebyqc5BzA&oe=6AB725F6" alt="Identidade visual da STEIF" alt="Moletom Steif NK Club"> 
+        </div>
+        <div class="produto-info">
+          <div class="produto-nome">Moletom NK Club</div>
+          <div class="produto-preco">R$ 159,90</div>
+          <button class="produto-btn" onclick="comprarProduto('Moletom NK Club')">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.37 5.07L2 22l5.19-1.47a9.86 9.86 0 0 0 4.85 1.27h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2z"/></svg>
+            Comprar pelo WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div class="produto-card">
+        <div class="produto-img">
+          <span class="produto-tam">38 · 39 · 40 · 41 · 42 </span>
+          <div class="produto-mono">STEIF</div>
+          <img src="https://instagram.fgjm1-1.fna.fbcdn.net/v/t51.82787-15/806299555_18037552187832881_3909049044338591326_n.jpg?stp=dst-jpegr_e35_p720x720_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=Mzk4MzkyNDY1NDAwMjMwNjEzNA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMzAyNC5oZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=pKax8fa1t9UQ7kNvwERHH7x&_nc_oc=AdpUVff_OCCKxvWiGyK0l2N8dPGvVr5W-KZ3HA1xynMrPBCwO-ig430_cVY7zcQQHAo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fgjm1-1.fna&_nc_gid=61GU1UwaFWhVTFZ22lA5bA&_nc_ss=7a22e&oh=00_AQIteQUxpl0fMKTRnhqVB1jCqMmc3d_ToRm-YrUxf4bhzQ&oe=6AB72AE7" alt="Identidade visual da STEIF" alt="Adi2000">
+        </div>
+        <div class="produto-info">
+          <div class="produto-nome">Adi2000</div>
+          <div class="produto-preco">R$ 219,90</div>
+          <button class="produto-btn" onclick="comprarProduto('Adi2000')">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.37 5.07L2 22l5.19-1.47a9.86 9.86 0 0 0 4.85 1.27h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2z"/></svg>
+            Comprar pelo WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div class="produto-card">
+        <div class="produto-img">
+          <span class="produto-tam">P · M · G · GG</span>
+          <div class="produto-mono">STEIF</div>
+          <img src="https://instagram.fgjm1-1.fna.fbcdn.net/v/t51.82787-15/753546122_18030122228832881_7593201156480233676_n.jpg?stp=dst-jpg_e35_p640x640_sh2.08_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=Mzk0Njg5ODU3MjgyNTEzMzA1MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTE2NC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=b0-FwTv1WLkQ7kNvwG2G1nQ&_nc_oc=Adp7CKBd-skhG_oEHJ-Q7aoLhNFGdH51qZ2FhKU3KVhewioJQFmy44N7Lu4_kIOEvg8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fgjm1-1.fna&_nc_gid=HxYd84ACiF30iVLXv9Duvg&_nc_ss=7a22e&oh=00_AQLOQCMBEArIwNws5Tuz0FI7bNGeWM10rkog6GrmonJDkQ&oe=6AB73C68" alt="Identidade visual da STEIF" alt="Camiseta Z4ra texturizada"> 
+        </div>
+        <div class="produto-info">
+          <div class="produto-nome">Camiseta Z4ra Texturizada</div>
+          <div class="produto-preco">R$ 249,90</div>
+          <button class="produto-btn" onclick="comprarProduto('Camiseta Z4RA Texturizada')">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.37 5.07L2 22l5.19-1.47a9.86 9.86 0 0 0 4.85 1.27h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2z"/></svg>
+            Comprar pelo WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div class="produto-card">
+        <div class="produto-img">
+          <span class="produto-tam">P · M · G</span>
+          <div class="produto-mono"></div>
+          <img src="https://instagram.fgjm1-1.fna.fbcdn.net/v/t51.82787-15/671741209_18017764088832881_8531157072306295363_n.jpg?stp=dst-jpg_e35_p640x640_sh2.08_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=Mzg4MTA3MjI3NzI4MjgwMzgxNQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTAwMy5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=iRGBXdN4kcoQ7kNvwFIGwLQ&_nc_oc=AdpX1gHbvICEoSf_aUVKa7BWQzuVT-3YkjMww6couC9UlNmZ_4KdnSBrf-9WzmvDgEg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fgjm1-1.fna&_nc_gid=dftgMnVb8oVTE3zGAuWHNg&_nc_ss=7a22e&oh=00_AQLNWOjC7qnBtDybOssEqXpvhRzaNDAPbZb_6wCf1Bwd9Q&oe=6AB7119E" alt="Identidade visual da STEIF" alt="Camiseta Canelada"> 
+        </div>
+        <div class="produto-info">
+          <div class="produto-nome">Camiseta Canelada</div>
+          <div class="produto-preco">R$ 329,90</div>
+          <button class="produto-btn" onclick="comprarProduto('Camiseta Canelada')">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.37 5.07L2 22l5.19-1.47a9.86 9.86 0 0 0 4.85 1.27h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2z"/></svg>
+            Comprar pelo WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div class="produto-card">
+        <div class="produto-img">
+          <span class="produto-tam">P · M · G</span>
+          <div class="produto-mono">STEIF</div>
+          <img src="https://instagram.fgjm1-1.fna.fbcdn.net/v/t51.82787-15/654959706_18013320641832881_7017781685238217037_n.jpg?stp=dst-jpg_e35_p640x640_sh2.08_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ig_cache_key=Mzg1Nzc0NDkyNDE2NzIyNTMyMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTU0LnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=eFiZjJQGRNQQ7kNvwGV0Ngf&_nc_oc=AdoFyeay7x1ksIYYNd7BUYw75zd7CNO_9Ln1tZTo5aUZ-JONjFRKrNw9pFNRGBqU6uM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fgjm1-1.fna&_nc_gid=dftgMnVb8oVTE3zGAuWHNg&_nc_ss=7a22e&oh=00_AQJFL7XkQRrMDMgFNgLFIynyaYJVqldvT6-j-6wtzPK_Eg&oe=6AB73C60" alt="Identidade visual da STEIF" alt="uma Academy"> 
+        </div>
+        <div class="produto-info">
+          <div class="produto-nome">Camiseta Academy</div>
+          <div class="produto-preco">R$ 169,90</div>
+          <button class="produto-btn" onclick="comprarProduto('Camiseta Academy')">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.37 5.07L2 22l5.19-1.47a9.86 9.86 0 0 0 4.85 1.27h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2z"/></svg>
+            Comprar pelo WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div class="produto-card">
+        <div class="produto-img">
+          <span class="produto-tam">Único</span>
+          <div class="produto-mono">STEIF</div>
+          <img src="https://instagram.fgjm1-1.fna.fbcdn.net/v/t51.82787-15/657367294_18013908668832881_7583366650882125454_n.jpg?stp=dst-jpg_e35_p480x480_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ig_cache_key=Mzg2MDg5NDEyNzI0ODQ4NTk0OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTEzNS5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=M2KmAEraVjsQ7kNvwGOaNgZ&_nc_oc=Adpbn_HlitFlmqrN6XxQ_DQHCd-KTA23IQJY-DLDs8DD31B56xX5FUWvpLUY0A32Yjg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fgjm1-1.fna&_nc_gid=dftgMnVb8oVTE3zGAuWHNg&_nc_ss=7a22e&oh=00_AQJuDPAGeSF0yx1gthquWPUS1gBFPR8IfRZ9cBn1HcLfLg&oe=6AB71C22" alt="Identidade visual da STEIF" alt="Bonés STEIF"> 
+        </div>
+        <div class="produto-info">
+          <div class="produto-nome">Bonés STEIF</div>
+          <div class="produto-preco">R$ 99,90</div>
+          <button class="produto-btn" onclick="comprarProduto('Bonés STEIF')">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.37 5.07L2 22l5.19-1.47a9.86 9.86 0 0 0 4.85 1.27h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2z"/></svg>
+            Comprar pelo WhatsApp
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     COMPRE DO SEU JEITO
+     ============================================ -->
+<section class="whats-cta reveal">
+  <div class="wrap whats-inner">
+    <span class="eyebrow-num" style="color:var(--gray-500);">COMPRA PELO WHATSAPP</span>
+    <h2 style="margin-top:18px;">COMPRE DO<br>SEU JEITO</h2>
+    <p>Gostou de uma peça? Fale diretamente com a STEIF pelo WhatsApp, escolha seu tamanho, tire suas dúvidas e finalize seu pedido de forma rápida e simples.</p>
+    <button class="btn btn-whats" onclick="contatoGeral()" style="padding:18px 38px;font-size:15.5px;">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.37 5.07L2 22l5.19-1.47a9.86 9.86 0 0 0 4.85 1.27h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2z"/></svg>
+      Comprar pelo WhatsApp
+    </button>
+  </div>
+</section>
+
+<!-- ============================================
+     COMO COMPRAR
+     ============================================ -->
+<section class="passos reveal">
+  <div class="wrap">
+    <h2>COMO<br>COMPRAR</h2>
+    <div class="passos-grid">
+      <div class="passo">
+        <div class="passo-num">01</div>
+        <h3>Escolha sua peça</h3>
+        <p>Encontre a peça que combina com seu estilo.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-num">02</div>
+        <h3>Chame no WhatsApp</h3>
+        <p>Clique em comprar e fale diretamente com nossa equipe.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-num">03</div>
+        <h3>Receba seu pedido</h3>
+        <p>Combine a entrega via motoboy em Porto Velho ou o envio para sua cidade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SOBRE
+     ============================================ -->
+<section class="sobre reveal" id="sobre">
+  <div class="wrap sobre-grid">
+    <img src="https://i.imgur.com/AgAIjdX.jpeg" alt="Identidade visual da STEIF" style="width: 100%; height: auto; object-fit: cover; display: block;">
+    <div>
+      <span class="eyebrow-num">SOBRE A STEIF</span>
+      <h2 style="margin-top:14px;">MAIS QUE ROUPA.<br>IDENTIDADE.</h2>
+      <p>A STEIF nasceu para representar quem não precisa seguir padrões para construir seu próprio estilo. Uma marca de lifestyle e moda urbana criada para quem valoriza autenticidade, presença e personalidade.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     INSTAGRAM
+     ============================================ -->
+<section class="insta reveal">
+  <div class="wrap">
+    <h2>SIGA A STEIF</h2>
+    <p>Acompanhe nossos lançamentos, novidades e looks.</p>
+    <!-- Troque o link abaixo pelo Instagram real da loja -->
+    <a href="https://instagram.com/steif.loja" target="_blank" rel="noopener" class="btn btn-outline">Instagram</a>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">STEIF</div>
+        <p>Moda • Streetwear • Lifestyle<br>Porto Velho — RO</p>
+      </div>
+      <div class="footer-col">
+        <h4>NAVEGAÇÃO</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#colecao">Coleção</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#entregas">Entregas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>CONTATO</h4>
+        <ul>
+          <li><a href="#" onclick="contatoGeral();return false;">WhatsApp</a></li>
+          <li><a href="https://instagram.com/steif" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+        <p style="margin-top:22px;">Entregas via motoboy em toda Porto Velho — RO<br>Envios para todo o Brasil</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 STEIF. Todos os direitos reservados.</span>
+      <span>Porto Velho — RO</span>
+    </div>
+  </div>
+</footer>
+<!-- WhatsApp flutuante -->
+<button class="whats-float" onclick="contatoGeral()" aria-label="Falar com a STEIF pelo WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.37 5.07L2 22l5.19-1.47a9.86 9.86 0 0 0 4.85 1.27h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2zm0 17.9h-.01a8 8 0 0 1-4.08-1.12l-.29-.17-3.03.86.82-2.96-.19-.3a7.93 7.93 0 0 1-1.23-4.28c0-4.42 3.6-8.01 8.02-8.01 4.41 0 8 3.59 8 8.01 0 4.42-3.59 8-8 8zm4.39-6.01c-.24-.12-1.43-.71-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41-.14-.01-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.56.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
+</button>
+
+<script>
+/* ============================================
+   STEIF — script.js
+   ============================================ */
+
+// ---------------------------------------------
+// 1) NÚMERO DO WHATSAPP — TROQUE APENAS AQUI
+// Formato: código do país + DDD + número, sem espaços, sem +, sem traços
+// Exemplo: 556993571889  (55 = Brasil, 69 = DDD Porto Velho)
+// ---------------------------------------------
+const whatsappNumber = "556993571889";
+
+// Abre o WhatsApp com uma mensagem pré-preenchida
+function openWhatsApp(message) {
+  const encoded = encodeURIComponent(message);
+  window.open(`https://wa.me/${whatsappNumber}?text=${encoded}`, "_blank");
+}
+
+// Botão geral de contato (header, hero, CTA final, flutuante)
+function contatoGeral() {
+  openWhatsApp("Olá! Vim pelo site da STEIF e gostaria de saber mais sobre os produtos.");
+}
+
+// Botão de compra de um produto específico
+function comprarProduto(nomeProduto) {
+  openWhatsApp(`Olá! Vim pelo site da STEIF e tenho interesse em comprar a ${nomeProduto}. Gostaria de saber a disponibilidade e os tamanhos.`);
+}
+
+// Botão "Falar sobre entrega"
+function falarSobreEntrega() {
+  openWhatsApp("Olá! Gostaria de saber mais sobre as formas de entrega da STEIF.");
+}
+
+// ---------------------------------------------
+// Header com sombra ao rolar
+// ---------------------------------------------
+const header = document.getElementById("siteHeader");
+window.addEventListener("scroll", () => {
+  header.classList.toggle("scrolled", window.scrollY > 12);
+});
+
+// ---------------------------------------------
+// Menu hamburger (mobile)
+// ---------------------------------------------
+const hamburgerBtn = document.getElementById("hamburgerBtn");
+const mobilePanel = document.getElementById("mobilePanel");
+
+hamburgerBtn.addEventListener("click", () => {
+  const isOpen = mobilePanel.classList.toggle("open");
+  hamburgerBtn.classList.toggle("open", isOpen);
+  hamburgerBtn.setAttribute("aria-expanded", isOpen);
+  document.body.style.overflow = isOpen ? "hidden" : "";
+});
+
+mobilePanel.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    mobilePanel.classList.remove("open");
+    hamburgerBtn.classList.remove("open");
+    document.body.style.overflow = "";
+  });
+});
+
+// ---------------------------------------------
+// Reveal suave ao rolar a página
+// ---------------------------------------------
+const revealEls = document.querySelectorAll(".reveal");
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("in");
+      io.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => io.observe(el));
+</script>
+</body>
+</html>
